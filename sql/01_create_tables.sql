@@ -1,5 +1,4 @@
-USE
-optics;
+USE optics;
 
 CREATE TABLE supplier
 (
