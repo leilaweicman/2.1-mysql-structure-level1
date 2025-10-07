@@ -71,3 +71,19 @@ CREATE TABLE sale
         ON DELETE SET NULL
         ON UPDATE CASCADE
 );
+
+CREATE TABLE sale_detail
+(
+    sale_id    INT NOT NULL,
+    glasses_id INT NOT NULL,
+    quantity   INT NOT NULL,
+    PRIMARY KEY (sale_id, glasses_id),
+    FOREIGN KEY (sale_id)
+        REFERENCES sale (sale_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (glasses_id)
+        REFERENCES glasses (glasses_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
