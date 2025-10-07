@@ -30,3 +30,10 @@ INSERT INTO sale (sale_date, customer_id, employee_id)
 VALUES ('2025-02-05', 1, 1),
        ('2025-02-10', 2, 3),
        ('2025-02-12', 3, 1);
+
+INSERT INTO sale_detail (sale_id, glasses_id, quantity)
+VALUES (1, 1, 1),
+       (1, 2, 1),
+       (2, 3, 2),
+       (3, 4, 1),
+       (3, 5, 1);
