@@ -63,11 +63,11 @@ CREATE TABLE sale
     employee_id INT  NOT NULL,
     FOREIGN KEY (customer_id)
         REFERENCES customer (customer_id)
-        ON DELETE SET NULL
+        ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (employee_id)
         REFERENCES employee (employee_id)
-        ON DELETE SET NULL
+        ON DELETE CASCADE
         ON UPDATE CASCADE
 );
 
