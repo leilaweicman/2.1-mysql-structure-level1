@@ -25,3 +25,8 @@ INSERT INTO employee (first_name, last_name, job_title)
 VALUES ('Laura', 'Gomez', 'Sales Assistant'),
        ('Michael', 'Brown', 'Manager'),
        ('Sophie', 'Clark', 'Sales Assistant');
+
+INSERT INTO sale (sale_date, customer_id, employee_id)
+VALUES ('2025-02-05', 1, 1),
+       ('2025-02-10', 2, 3),
+       ('2025-02-12', 3, 1);
