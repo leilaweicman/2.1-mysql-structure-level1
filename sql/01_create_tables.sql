@@ -28,6 +28,22 @@ CREATE TABLE glasses
     right_lens_color VARCHAR(50),
     left_lens_color  VARCHAR(50),
     price            DECIMAL(8, 2),
-    supplier_id      INT
-        FOREIGN KEY (supplier_id) REFERENCES supplier(supplier_id)
+    supplier_id      INT,
+    FOREIGN KEY (supplier_id) REFERENCES supplier (supplier_id)
+);
+
+CREATE TABLE customer
+(
+    customer_id       INT AUTO_INCREMENT PRIMARY KEY,
+    first_name        VARCHAR(100),
+    last_name         VARCHAR(100),
+    address           VARCHAR(150),
+    phone             VARCHAR(20),
+    email             VARCHAR(100),
+    registration_date DATE,
+    referred_by       INT,
+    FOREIGN KEY (referred_by)
+        REFERENCES customer (customer_id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
 );
