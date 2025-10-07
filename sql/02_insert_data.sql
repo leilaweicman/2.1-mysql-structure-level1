@@ -15,3 +15,8 @@ VALUES ('Ray-Ban', 1.25, 1.50, 'plastic', 'black', 'clear', 'clear', 129.90, 1),
        ('Persol', 0.00, 0.00, 'floating', 'brown', 'clear', 'clear', 199.00, 2),
        ('Vogue', -2.25, -2.00, 'plastic', 'red', 'clear', 'clear', 99.00, 3),
        ('Prada', 0.75, 1.00, 'metallic', 'gold', 'brown', 'brown', 249.99, 3);
+
+INSERT INTO customer (first_name, last_name, address, phone, email, registration_date, referred_by)
+VALUES ('John', 'Smith', '123 Oxford St, London', '+44 201234567', 'john.smith@email.com', '2025-01-10', NULL),
+       ('Emma', 'Johnson', '45 Green Rd, London', '+44 209876543', 'emma.johnson@email.com', '2025-01-15', 1),
+       ('Daniel', 'Martinez', '8 Gran Via, Madrid', '+34 600123456', 'daniel.martinez@email.com', '2025-01-20', 2);
