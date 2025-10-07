@@ -20,3 +20,8 @@ INSERT INTO customer (first_name, last_name, address, phone, email, registration
 VALUES ('John', 'Smith', '123 Oxford St, London', '+44 201234567', 'john.smith@email.com', '2025-01-10', NULL),
        ('Emma', 'Johnson', '45 Green Rd, London', '+44 209876543', 'emma.johnson@email.com', '2025-01-15', 1),
        ('Daniel', 'Martinez', '8 Gran Via, Madrid', '+34 600123456', 'daniel.martinez@email.com', '2025-01-20', 2);
+
+INSERT INTO employee (first_name, last_name, job_title)
+VALUES ('Laura', 'Gomez', 'Sales Assistant'),
+       ('Michael', 'Brown', 'Manager'),
+       ('Sophie', 'Clark', 'Sales Assistant');
