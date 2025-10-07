@@ -3,13 +3,14 @@ version: "3.8"
 services:
   mysql:
     image: mysql:8.0
-    container_name: mysql-optica
+    platform: linux/arm64
+    container_name: mysql-optics
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: optica
-      MYSQL_USER: optica_user
-      MYSQL_PASSWORD: optica_pass
+      MYSQL_DATABASE: optics
+      MYSQL_USER: optics_user
+      MYSQL_PASSWORD: optics_pass
     ports:
       - "3306:3306"
     volumes:
