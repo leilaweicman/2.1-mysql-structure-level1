@@ -1,5 +1,7 @@
-CREATE DATABASE IF NOT EXISTS pizzeria;
-USE pizzeria;
+CREATE
+DATABASE IF NOT EXISTS pizzeria;
+USE
+pizzeria;
 
 CREATE TABLE province
 (
@@ -89,7 +91,7 @@ CREATE TABLE customer_order
     total_price          DECIMAL(8, 2) NOT NULL,
     customer_id          INT           NOT NULL,
     store_id             INT           NOT NULL,
-    employee_id          INT           NOT NULL,
+    employee_id          INT,
     delivery_employee_id INT NULL,
     delivery_date_time   DATETIME NULL,
     FOREIGN KEY (customer_id)
