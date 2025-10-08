@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  mysql:
+  mysql-optics:
     image: mysql:8.0
     platform: linux/arm64
     container_name: mysql-optics
@@ -15,7 +15,24 @@ services:
       - "3306:3306"
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
-      - mysql_data:/var/lib/mysql
+      - mysql_data_optics:/var/lib/mysql
+
+  mysql-pizzeria:
+    image: mysql:8.0
+    platform: linux/arm64
+    container_name: mysql-pizzeria
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pizzeria
+      MYSQL_USER: pizzeria_user
+      MYSQL_PASSWORD: pizzeria_pass
+    ports:
+      - "3307:3306"   # diferente puerto para evitar conflicto con optics
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+      - mysql_data_pizzeria:/var/lib/mysql
 
 volumes:
-  mysql_data:
+  mysql_data_optics:
+  mysql_data_pizzeria:
