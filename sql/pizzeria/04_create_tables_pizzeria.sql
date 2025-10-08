@@ -1,7 +1,5 @@
-CREATE
-DATABASE IF NOT EXISTS pizzeria;
-USE
-pizzeria;
+CREATE DATABASE IF NOT EXISTS pizzeria;
+USE pizzeria;
 
 CREATE TABLE province
 (
@@ -119,7 +117,7 @@ CREATE TABLE order_detail
     quantity   INT NOT NULL,
     PRIMARY KEY (order_id, product_id),
     FOREIGN KEY (order_id)
-        REFERENCES orders (order_id)
+        REFERENCES customer_order (order_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (product_id)
