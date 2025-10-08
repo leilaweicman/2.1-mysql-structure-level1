@@ -25,9 +25,9 @@ INSERT INTO customer (first_name, last_name, address, postal_code, phone, locali
 VALUES ('Ana', 'Lopez', 'Carrer Sol 15', '08002', '600123123', 1),
        ('Miguel', 'Torres', 'Carrer Mar 8', '08301', '600234234', 2);
 
-INSERT INTO customer_order (date_time_order, order_type, total_price, customer_id, store_id, employee_id, delivery_employee_id, delivery_date_time)
-VALUES ('2025-10-06 13:30:00', 'delivery', 20.00, 1, 1, 1, 2, '2025-10-06 14:00:00'),
-       ('2025-10-06 19:00:00', 'pickup', 10.50, 2, 2, 3, NULL, NULL);
+INSERT INTO customer_order (date_time_order, order_type, total_price, customer_id, store_id, delivery_employee_id, delivery_date_time)
+VALUES ('2025-10-06 13:30:00', 'delivery', 20.00, 1, 1, 2, '2025-10-06 14:00:00'),
+       ('2025-10-06 19:00:00', 'pickup', 10.50, 2, 2, NULL, NULL);
 
 INSERT INTO order_detail (order_id, product_id, quantity)
 VALUES (1, 1, 1),
