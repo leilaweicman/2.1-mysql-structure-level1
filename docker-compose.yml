@@ -28,7 +28,7 @@ services:
       MYSQL_USER: pizzeria_user
       MYSQL_PASSWORD: pizzeria_pass
     ports:
-      - "3307:3306"   # diferente puerto para evitar conflicto con optics
+      - "3307:3306"
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
       - mysql_data_pizzeria:/var/lib/mysql
