@@ -66,3 +66,29 @@ CREATE TABLE product
     FOREIGN KEY (category_id) REFERENCES category (category_id)
 );
 
+CREATE TABLE order
+(
+    order_id             INT AUTO_INCREMENT PRIMARY KEY,
+    date_time_order      DATETIME      NOT NULL,
+    order_type           ENUM('delivery', 'pickup') NOT NULL,
+    total_price          DECIMAL(8, 2) NOT NULL,
+    customer_id          INT           NOT NULL,
+    store_id             INT           NOT NULL,
+    employee_id          INT           NOT NULL,
+    delivery_employee_id INT NULL,
+    delivery_date_time   DATETIME NULL,
+    FOREIGN KEY (customer_id) REFERENCES customer (customer_id),
+    FOREIGN KEY (store_id) REFERENCES store (store_id),
+    FOREIGN KEY (employee_id) REFERENCES employee (employee_id),
+    FOREIGN KEY (delivery_employee_id) REFERENCES employee (employee_id)
+);
+
+CREATE TABLE order_detail
+(
+    order_id   INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity   INT NOT NULL,
+    PRIMARY KEY (order_id, product_id),
+    FOREIGN KEY (order_id) REFERENCES orders (order_id),
+    FOREIGN KEY (product_id) REFERENCES product (product_id)
+);
