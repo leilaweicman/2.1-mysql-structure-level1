@@ -14,7 +14,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./sql:/docker-entrypoint-initdb.d
+      - ./sql/optics:/docker-entrypoint-initdb.d
       - mysql_data_optics:/var/lib/mysql
 
   mysql-pizzeria:
@@ -30,7 +30,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - ./sql:/docker-entrypoint-initdb.d
+      - ./sql/pizzeria:/docker-entrypoint-initdb.d
       - mysql_data_pizzeria:/var/lib/mysql
 
 volumes:
