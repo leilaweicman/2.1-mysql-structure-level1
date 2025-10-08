@@ -50,6 +50,19 @@ CREATE TABLE employee
 
 CREATE TABLE category
 (
-    category_id   INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    name        VARCHAR(100) NOT NULL
 );
+
+CREATE TABLE product
+(
+    product_id   INT AUTO_INCREMENT PRIMARY KEY,
+    name         VARCHAR(100)  NOT NULL,
+    description  TEXT,
+    image        VARCHAR(255),
+    price        DECIMAL(8, 2) NOT NULL,
+    product_type ENUM('pizza', 'burger', 'drink') NOT NULL,
+    category_id  INT NULL,
+    FOREIGN KEY (category_id) REFERENCES category (category_id)
+);
+
