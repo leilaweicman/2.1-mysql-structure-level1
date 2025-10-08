@@ -81,7 +81,7 @@ CREATE TABLE product
         ON UPDATE CASCADE
 );
 
-CREATE TABLE order
+CREATE TABLE customer_order
 (
     order_id             INT AUTO_INCREMENT PRIMARY KEY,
     date_time_order      DATETIME      NOT NULL,
